@@ -1,0 +1,111 @@
+.contact_container {
+    flex-direction: column;
+    row-gap: 3.5rem;
+}
+
+.contact_content{
+    flex: 1;
+}
+
+.contact_title {
+    margin-bottom: 2rem;
+}
+
+.contact_data {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.contact_subtitle {
+    font-size: .938rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 70%);
+    margin-bottom: .5rem;
+}
+
+.contact_desc {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: hsl(0, 0%, 95%);
+    font-weight: 500;
+}
+
+.contact_desc i {
+    font-size: 1rem;
+}
+
+.contact_form{
+    flex: 1;
+}
+
+.contact_inputs {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.contact_input_content {
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .2);
+}
+
+.contact_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+
+.contact_input:focus+.contact_label {
+    top: -.75rem;
+    left: 0;
+    font-size: .938rem;
+    z-index: 10;
+}
+
+.contact_input:not(:placeholder-shown).contact_input:not(:focus)+.contact_label {
+    top: -.75rem;
+    font-size: .938rem;
+    z-index: 10;
+}
+
+.contact_label {
+    position: absolute;
+    top: .75rem;
+    width: 100%;
+    font-size: .813rem;
+    color: hsl(0, 0%, 70%);
+    transition: .3s;
+}
+
+.contact_area {
+    height: 7rem;
+}
+
+.contact_area textarea {
+    resize: none;
+}
+
+.contact_button {
+    cursor: pointer;
+    margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 695px) {
+    .contact_title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 696px) {
+    .contact_container {
+        flex-direction: row;
+    }
+}

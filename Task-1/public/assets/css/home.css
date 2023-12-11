@@ -1,0 +1,162 @@
+.home{
+    position: relative;
+}
+
+.home_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home_shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(180deg,
+                hsla(0, 0%, 0%, 0) 58%,
+                hsl(0, 0%, 0%) 78%);
+}
+
+.home_container{
+    position: relative;
+    padding-top: 3rem;
+    row-gap: 3rem;
+    flex-direction: column;
+}
+
+.home_data{
+    text-align: center;
+}
+
+.home_subtitle{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    color: white;
+}
+
+.home_title{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.home_desc{
+    margin-bottom: 2rem;
+    color: hsl(0, 0%, 95%);;
+}
+
+.home_cards{
+    grid-template-columns: 240px;
+    justify-content: center;
+}
+
+.home_card{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 240px;
+}
+.home_card:hover .home_card_img{
+    transform: scale(1.2);
+}
+
+.home_card_img{
+    height: 100%;
+    transition: transform .4s;
+}
+.home_card_title{
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.home_card_shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+        hsla(0, 0%, 0%, 0) 50%,
+        hsl(0, 0%, 0%) 125%);
+}
+
+#drop-area {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+#drop-area h3 {
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#drop-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 576px) {
+    .home_container{
+        grid-template-columns: 380px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .home_cards{
+        grid-template-columns: repeat(2, 240px);
+    }
+    .home_title{
+        font-size: 2.75rem;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .home_shadow{
+        height: 810px;
+    }
+
+    .home_container{
+        grid-template-columns: initial;
+        justify-content: initial;
+        grid-row: 4rem;
+        padding-top: 6.5rem;
+    }
+
+    .home_data{
+        text-align: initial;
+        width: 480px;
+    }
+
+    .home_subtitle{
+        font-size: 1.25rem;
+    }
+
+    .home_desc{
+        margin-bottom: 2.5rem;
+    }
+    .home_cards{
+        grid-template-columns: repeat(4, 240px);
+    }
+
+    .home_card_title{
+        left: 1.5rem;
+        bottom: 1.5rem;
+    }
+} 
